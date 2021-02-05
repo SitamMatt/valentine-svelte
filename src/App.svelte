@@ -1,33 +1,26 @@
 <script lang="ts">
-	import Section from "./Section.svelte";
-	import "tailwindcss/tailwind.css";
+	import MainSection from "./MainSection.svelte";
 
-	export let name: string;
+	import Section from "./Section.svelte";
 </script>
 
 <main>
-	<Section />
-	<Section />
+	<div class="bg-red-400">
+		<MainSection />
+		<!-- <Section onScreen={true} /> -->
+		<!-- <Section watch={true} /> -->
+		<!-- <Section watch={true} /> -->
+	</div>
 </main>
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+<style global lang="postcss">
+	/* only apply purgecss on utilities, per Tailwind docs */
+	/* purgecss start ignore */
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+	.wrapper {
+		background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
 	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+	/* purgecss end ignore */
 </style>
