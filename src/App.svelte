@@ -1,15 +1,21 @@
 <script lang="ts">
+	import FullscreenWrapper from "./components/FullscreenWrapper.svelte";
+
+	import GallerySection from "./GallerySection.svelte";
+
 	import MainSection from "./MainSection.svelte";
 
 	import Section from "./Section.svelte";
 </script>
 
 <main>
-	<div class="bg-red-400">
-		<MainSection />
-		<!-- <Section onScreen={true} /> -->
-		<!-- <Section watch={true} /> -->
-		<!-- <Section watch={true} /> -->
+	<div class="bg-red-300">
+		<FullscreenWrapper>
+			<MainSection />
+		</FullscreenWrapper>
+		<FullscreenWrapper>
+			<GallerySection />
+		</FullscreenWrapper>
 	</div>
 </main>
 
@@ -19,8 +25,5 @@
 	@tailwind base;
 	@tailwind components;
 	@tailwind utilities;
-	.wrapper {
-		background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
-	}
 	/* purgecss end ignore */
 </style>
