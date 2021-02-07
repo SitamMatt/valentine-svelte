@@ -8,14 +8,6 @@
 </div>
 
 <style>
-	.elo {
-		width: 100%;
-		height: 100%;
-		background-color: green;
-		border: 10px solid white;
-	}
-	.photo-container {
-	}
 	.photo-container > img {
 		border: 5px solid white;
 		padding: 0;
